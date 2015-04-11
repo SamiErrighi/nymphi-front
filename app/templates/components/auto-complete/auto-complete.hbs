@@ -1,0 +1,9 @@
+{{profile.plant.name}}<br/>
+{{auto-complete/auto-complete-input}}
+<ul class="auto-complete-result">
+    {{#each plant in filterPlant}}
+        {{auto-complete/li-item}} {{plant.name}}
+    {{/each}}
+</ul>
+
+

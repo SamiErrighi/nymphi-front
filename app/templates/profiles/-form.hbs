@@ -1,0 +1,12 @@
+<div class="dude">
+    <form >
+        {{input value= model.name }}
+        {{auto-complete/auto-complete profile= model plants= plants}}
+        <button {{action "submit" }}>Update</button>
+        {{#if updated }}
+            <div class="updated">
+                Profile mis à jour
+            </div>
+        {{/if}}
+    </form>
+</div>
