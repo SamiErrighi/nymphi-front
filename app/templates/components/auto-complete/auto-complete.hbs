@@ -2,8 +2,11 @@
 {{auto-complete/auto-complete-input}}
 <ul class="auto-complete-result">
     {{#each plant in filterPlant}}
-        {{auto-complete/li-item}} {{plant.name}}
+        {{#auto-complete/li-item plant=plant}}
+            {{plant.name}}
+        {{/auto-complete/li-item}}
     {{/each}}
 </ul>
+{{profile.plant.planting}}
 
 

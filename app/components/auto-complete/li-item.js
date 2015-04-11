@@ -1,11 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    action: 'clickPlant',
     tagName: 'li',
     click: function(e) {
-        this.sendAction('action', this.get('plant'))
-         Em.$('.auto-input').val(this.get('plant.name'))
-         Em.$('.list-auto').hide();
+        this.set('parentView.profile.plant', this.get('plant'));
+        this.set('parentView.input.value', this.get('plant.name'));
+        Ember.$('.auto-complete-result').hide();
     }
 });
